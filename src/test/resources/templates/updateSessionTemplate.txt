@@ -1,0 +1,1 @@
+{"sourceOfFunds":{"provided":{"card":{"number":"${sourceOfFunds.provided.card.number}","expiry":{"year":"${sourceOfFunds.provided.card.expiry.year}","month":"${sourceOfFunds.provided.card.expiry.month}"}}},"type":"CARD"}}

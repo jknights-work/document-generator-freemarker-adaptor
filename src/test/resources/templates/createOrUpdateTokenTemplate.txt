@@ -1,0 +1,1 @@
+{<#if session.id?has_content>"session":{"id":"${session.id}"},</#if>"sourceOfFunds":{<#if sourceOfFunds.provided.card.number?has_content>"provided":{"card":{"number":"${sourceOfFunds.provided.card.number},"expiry":{"year":${sourceOfFunds.provided.card.expiry.year},"month":${sourceOfFunds.provided.card.expiry.month}}}},</#if>"type":"CARD"}}

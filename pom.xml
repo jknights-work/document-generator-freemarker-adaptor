@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  File      : pom.xml
+  Author    : cmartin
+  Copyright : Martin Technical Consulting Limited Ltd (2018)
+  Created   : 21-Jan-2018
+
+  History
+    21-Jan-2018 cmartin The initial version.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+    
+  <parent>
+    <groupId>com.willow</groupId>
+    <artifactId>common-java-master</artifactId>
+    <version>1.0.0-RELEASE</version>
+  </parent>
+  <artifactId>document-generator-freemarker-adaptor</artifactId>
+  <version>1.0.0-RELEASE</version>
+  <packaging>jar</packaging>
+
+  <name>Document Generator Freemarker Adaptor [V1.0.0]</name>
+  <description>Provides an implementation of a Document Generator that uses Freemarker to generate the
+    document.</description>
+
+  <properties>
+    <common.document.generator.version>1.0.0-RELEASE</common.document.generator.version>
+    <common.service.version>1.0.0-RELEASE</common.service.version>
+    <freemarker.version>2.3.8</freemarker.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.willow</groupId>
+      <artifactId>common-service</artifactId>
+      <version>${common.service.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.willow</groupId>
+      <artifactId>common-document-generator</artifactId>
+      <version>${common.document.generator.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>freemarker</groupId>
+      <artifactId>freemarker</artifactId>
+      <version>${freemarker.version}</version>
+    </dependency>
+  </dependencies>
+</project>

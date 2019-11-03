@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  File      : document-generator.xml
+  Author    : cmartin
+  Copyright : Martin Technical Consulting Limited Ltd (2018)
+  Created   : 21-Jan-2018
+
+  History
+    21-Jan-2018 cmartin The initial version.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+  <import resource="classpath:com/eurobase/common/document/generator/document-support.xml" />
+
+  <bean id="freeMarkerDocumentGeneratorService"
+        class="com.willow.document.generator.freemarker.adaptor.service.impl.LocalFreeMarkerDocumentGeneratorService">
+    <property name="eventHandler">
+      <bean class="com.willow.common.event.impl.BlockingEventHandler" />
+    </property>
+    <property name="stringUtil" ref="documentGeneratorStringTool" />
+  </bean>
+</beans>
+
+

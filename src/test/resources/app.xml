@@ -1,0 +1,19 @@
+<!--
+  File      : app.xml
+  Author    : cmartin
+  Copyright : Martin Technical Consulting Limited Ltd (2018)
+  Created   : 21-Jan-2018
+
+  History
+    23-11-2017 cmartin The initial version.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+  <bean id="subject" class="com.willow.document.generator.freemarker.service.impl.LocalFreeMarkerDocumentGeneratorService">
+    <property name="stringUtil" ref="documentGeneratorStringTool"/>
+  </bean>
+  <bean id="documentGeneratorStringTool" class="com.willow.common.document.generator.support.DocumentGeneratorStringTool">
+  </bean>
+</beans>
